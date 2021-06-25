@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.app.bygclite.viewmodels.OtpVerifyScreenViewModel" />
+
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.authenticationverifyotp.VerifyAuthenticationOtpActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_tool_bar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{listener::onClick}"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_verification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/verification"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/image_back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/image_back" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/text_verification_code_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_send_verification_code"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_tool_bar" />
+
+            <LinearLayout
+                android:id="@+id/layout_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_verification_code_sent">
+
+                <TextView
+                    android:id="@+id/text_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#141619"
+                    android:textSize="15sp"
+                    tools:text="6238283379" />
+
+                <TextView
+                    android:id="@+id/text_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/change"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="7dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:onClick="@{listener::onClick}"
+                    />
+
+            </LinearLayout>
+
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="27dp"
+                android:inputType="number"
+                android:itemBackground="#F2F3F5"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_phone"
+                app:length="6"
+                app:otp_box_background="@drawable/otp_box"
+                app:otp_box_background_active="@drawable/otp_active"
+                app:otp_box_background_error="@drawable/bg_otp_error"
+                app:otp_text_size="24dp" />
+
+            <TextView
+                android:id="@+id/text_otp_error_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="27dp"
+                android:text="@string/otp_error_text"
+                android:textColor="@color/colorError"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/otp_view" />
+
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/bg_blue"
+                android:fontFamily="@font/roboto_medium"
+                android:onClick="@{listener::onClick}"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="@string/submit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_otp_error_text" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_submit"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/text_otp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#5A5A5A"
+                    android:textSize="14sp"
+                    tools:text="Fetching OTP" />
+
+                <TextView
+                    android:id="@+id/text_otp_count_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorAccent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="14sp"
+                    tools:text="00:27"
+                    android:onClick="@{listener::onClick}"
+                    />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/appLoader"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/layout_resend"
+                android:layout_marginBottom="7dp"
+                android:indeterminateTint="@color/colorIntermediateTint"
+                android:visibility="gone"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

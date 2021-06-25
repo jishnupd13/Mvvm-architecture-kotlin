@@ -7,11 +7,11 @@
 
         <variable
             name="item"
-            type="com.app.mymainapp.models.Name" />
+            type="com.app.bygclite.models.Name" />
 
         <variable
             name="listner"
-            type="com.app.mymainapp.listeners.OnItemClickListener" />
+            type="com.app.bygclite.listeners.OnItemClickListener" />
 
 
     </data>

@@ -1,6 +1,17 @@
 <resources>
-    <string name="app_name">MyMainApp</string>
+    <string name="app_name">BYGC</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button">Button</string>
+    <string name="skip">Skip</string>
+    <string name="enter_mobile_number">Enter mobile Number</string>
+    <string name="submit">Submit</string>
+    <string name="text_terms_and_conditions">By tapping proceed you agree to our\n
+        <u>Terms &amp; conditions</u></string>
+    <string name="verification">Verification</string>
+    <string name="text_send_verification_code">We have sent a verification code to</string>
+    <string name="change">Change</string>
+    <string name="otp_error_text">You have inputed an Invalid OTP</string>
+    <string name="invalid_mobile_number">Invalid mobile number</string>
+
 </resources>

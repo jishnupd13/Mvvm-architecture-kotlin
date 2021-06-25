@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "521082074590",
+    "firebase_url": "https://bygclites-default-rtdb.firebaseio.com",
+    "project_id": "bygclites",
+    "storage_bucket": "bygclites.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521082074590:android:6630313984b7b5cf6e994f",
+        "android_client_info": {
+          "package_name": "com.app.bygclite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521082074590-0klap0q2q84o42olmv5bl1rcbn7rk5ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQfgkzZdgYtJGGeG_jj4d6x08pPJp4gRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521082074590-0klap0q2q84o42olmv5bl1rcbn7rk5ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

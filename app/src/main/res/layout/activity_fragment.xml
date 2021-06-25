@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.app.mymainapp.viewmodels.FragmentViewModel" />
+            type="com.app.bygclite.viewmodels.FragmentViewModel" />
 
         <variable
             name="listener"

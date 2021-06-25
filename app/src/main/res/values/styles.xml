@@ -8,4 +8,37 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="exampleCursor" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <item name="colorPrimary">#AEB5C4</item>
+        <item name="colorPrimaryDark">#AEB5C4</item>
+        <item name="colorSecondary">#AEB5C4</item>
+        <item name="android:textColorHint">#AEB5C4</item>
+        <item name="hintTextColor">#AEB5C4</item>
+
+        <item name="boxStrokeColor">#CAD0DD</item>
+        <item name="boxStrokeWidth">1dp</item>
+
+        <item name="android:theme">@style/exampleCursor</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+    </style>
+
+
 </resources>
