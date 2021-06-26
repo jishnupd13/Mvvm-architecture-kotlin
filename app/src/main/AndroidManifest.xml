@@ -14,16 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.createuser.CreateUserActivity"
+        <activity android:name=".ui.home.HomeActivity"></activity>
+        <activity
+            android:name=".ui.createuser.CreateUserActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppMaterialTheme"
-            />
-        <activity android:name=".ui.otpverifyscreenactivity.OtpVerifyScreenActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".ui.authenticationscreen.AuthenticationScreenActivity"
-            android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppMaterialTheme" />
+        <activity
+            android:name=".ui.otpverifyscreenactivity.OtpVerifyScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.authenticationscreen.AuthenticationScreenActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:screenOrientation="portrait"

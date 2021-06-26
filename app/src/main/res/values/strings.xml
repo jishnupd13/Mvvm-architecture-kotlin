@@ -13,5 +13,9 @@
     <string name="change">Change</string>
     <string name="otp_error_text">You have inputed an Invalid OTP</string>
     <string name="invalid_mobile_number">Invalid mobile number</string>
+    <string name="add_post">Add Post</string>
+    <string name="profile">Profile</string>
+    <string name="topics">Topics</string>
+    <string name="logout">Logout</string>
 
 </resources>
